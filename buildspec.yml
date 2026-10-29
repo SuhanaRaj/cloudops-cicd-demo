@@ -1,0 +1,14 @@
+
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - echo "Starting CloudOps demo build"
+      - test -f index.html
+      - grep -q "Automated Deployment Successful" index.html
+      - echo "Build and validation successful"
+
+artifacts:
+  files:
+    - index.html
